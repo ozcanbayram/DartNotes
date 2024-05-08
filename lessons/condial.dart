@@ -3,11 +3,11 @@ void main(List<String> args) {
   //ornek isimler: ahmet, mehmet, veli, kx, j
   //karakter uzunlugu sadece 2 veya daha az olanlar gösterilecek
 
-  String ahmetC = 'Ahmet';
-  String mehmetC = 'Mehmet';
-  String veliC = 'Veli';
-  String kxC = 'Kx';
-  String xC = 'X';
+  final String ahmetC = 'Ahmet';
+  final String mehmetC = 'Mehmet';
+  final String veliC = 'Veli';
+  final String kxC = 'Kx';
+  final String xC = 'X';
 
   int ahmetCL = ahmetC.length;
   int mehmetCL = mehmetC.length;
