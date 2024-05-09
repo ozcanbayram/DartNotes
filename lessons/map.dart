@@ -29,7 +29,6 @@ void main() {
   };
   for(var i in bank.keys){
     //bankanin tum elemanlari
-    
     for(var money in bank[i]!){
         //hesaplari dolasir
         if(money>150){
