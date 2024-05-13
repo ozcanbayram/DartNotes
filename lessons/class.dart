@@ -33,7 +33,7 @@ void main() {
 
   //class kullanimi:
 
-  User user1 = User('Ozcan', 2000, age:21, city: 'İstanbul'); // User sınıfından user1 nesnesini oluşturduk.
+  User user1 = User('Ozcan', 2000, age:21, city: 'İstanbul', id: '5'); // User sınıfından user1 nesnesini oluşturduk.
   if(user1.city == null){
     print('Kişi şehir verisini girmedi.');
   }else{
@@ -55,17 +55,34 @@ int? controlMoney(int? money) {
 //parası olmak zorunda
 //yaşını vermeyebilir
 //city vermeyebilir 
+//id degiskenine sadece bu sınıftan erisilebilsin (private)
 class User{
   late final String name; //Late ile constructor esnasında yani daha sonra değer atanacağını belirtiriz.
   late final int money;
   late final int? age;
   late final String? city;
 
+  late final String _id; //required --> bu veri gelmek zorunda.   Private yapmak için -> _id
+
   //Constructor
-  User(String name, int money,{ int? age, String? city}){
+  User(String name, int money,{required String id, int? age, String? city}){
     this.name = name;
     this.money = money;
     this.age = age;
+    _id =id;
     this.city = city;
   }
 }
+
+
+//Bir diğer tanımlama
+class User1{
+  late final String name; //Late ile constructor esnasında yani daha sonra değer atanacağını belirtiriz.
+  late final int money;
+  late final int? age;
+  late final String? city;
+
+  //Constructor
+  User1(this.name,this.money,{this.age,this.city});
+}
+  
