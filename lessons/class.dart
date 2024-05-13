@@ -33,7 +33,14 @@ void main() {
 
   //class kullanimi:
 
-  User user1 = User('Ozcan', 2000, 21, 'Ankara'); // User sınıfından user1 nesnesini oluşturduk.
+  User user1 = User('Ozcan', 2000, age:21, city: 'İstanbul'); // User sınıfından user1 nesnesini oluşturduk.
+  if(user1.city == null){
+    print('Kişi şehir verisini girmedi.');
+  }else{
+    if(user1.city == 'İstanbul'){
+      print('İstanbullu müşterilere özel 100 tl indirim');
+    }
+  }
 
 }
 
@@ -51,11 +58,11 @@ int? controlMoney(int? money) {
 class User{
   late final String name; //Late ile constructor esnasında yani daha sonra değer atanacağını belirtiriz.
   late final int money;
-  late final int age;
-  late final String city;
+  late final int? age;
+  late final String? city;
 
   //Constructor
-  User(String name, int money, int age, String city){
+  User(String name, int money,{ int? age, String? city}){
     this.name = name;
     this.money = money;
     this.age = age;
