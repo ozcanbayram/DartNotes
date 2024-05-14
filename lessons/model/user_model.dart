@@ -51,3 +51,10 @@ class User{
   //Yani bu değer çağrıldığında her defasında hesaplanır ve değer döndürür.
 
 }
+
+extension UserControlExtension on User{ //Extension --> User sınıfına bir uzantı eklemek için kullanılabilir.
+  void controlName() {
+    this.age; // şeklinde User sınıfındaki şeylere erişebiliriz.
+    print(name); // ... gibi 
+  }
+}
