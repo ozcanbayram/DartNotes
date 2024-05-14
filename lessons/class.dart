@@ -47,7 +47,7 @@ void main() {
 
   //user_model den gelen id ye göre idsi 12 olana indirim yap
   if(user1.isSpecialUser('12')){
-    print('indirim yapıldı');
+    print('indirim yapildi');
     user1.isEmptyId;
   }
 
